@@ -1,0 +1,150 @@
+{
+  "phones": [
+    {
+      "category": "phones",
+      "title": "iPhone 15 Pro",
+      "url": "iphone-15-pro",
+      "price": 1199,
+      "image": "https://files.foxtrot.com.ua/PhotoNew/img_0_60_11524_0_1_EDCFH7.webp",
+      "description": "Apple iPhone 15 Pro with A17 Pro chip, 6.1-inch display, and triple camera system.",
+      "stock": 12
+    },
+    {
+      "category": "phones",
+      "title": "Samsung Galaxy S24 Ultra",
+      "url": "galaxy-s24-ultra",
+      "price": 1099,
+      "image": "https://content1.rozetka.com.ua/goods/images/big/429440267.jpg",
+      "description": "Samsung flagship with 200MP camera, 6.8-inch AMOLED display, and S Pen support.",
+      "stock": 8
+    },
+    {
+      "category": "phones",
+      "title": "Google Pixel 8 Pro",
+      "url": "pixel-8-pro",
+      "price": 999,
+      "image": "https://img.jabko.ua/image/cache/catalog/products/2024/01/131229/pixel-8pro-black-1%20(1)-1397x1397.jpg.webp",
+      "description": "Google Pixel 8 Pro with Tensor G3 chip, 6.7-inch OLED, and advanced AI features.",
+      "stock": 15
+    },
+    {
+      "category": "phones",
+      "title": "OnePlus 12",
+      "url": "oneplus-12",
+      "price": 799,
+      "image": "https://i.moyo.ua/img/products/5689/77_4000.jpg",
+      "description": "OnePlus 12 with Snapdragon 8 Gen 3, 120Hz AMOLED, and fast charging.",
+      "stock": 10
+    },
+    {
+      "category": "phones",
+      "title": "Xiaomi 14 Pro",
+      "url": "xiaomi-14-pro",
+      "price": 749,
+      "image": "https://hotline.ua/img/tx/546/5465525835.jpg",
+      "description": "Xiaomi 14 Pro with Leica camera, 6.73-inch display, and 120W charging.",
+      "stock": 20
+    },
+    {
+      "category": "phones",
+      "title": "Sony Xperia 1 V",
+      "url": "xperia-1-v",
+      "price": 999,
+      "image": "https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://cdn.comfy.ua/media/catalog/product/o/1/o16u_black_back_1_.jpg/w_600",
+      "description": "Sony Xperia 1 V with 4K OLED display, triple camera, and pro video features.",
+      "stock": 7
+    },
+    {
+      "category": "phones",
+      "title": "Motorola Edge 50 Pro",
+      "url": "motorola-edge-50-pro",
+      "price": 699,
+      "image": "https://i.allo.ua/media/catalog/product/cache/1/image/524x494/602f0fa2c1f0d1ba5e241f914e856ff9/5/6/5656757567_1.webp",
+      "description": "Motorola Edge 50 Pro with curved display, 125W charging, and 50MP camera.",
+      "stock": 18
+    },
+    {
+      "category": "phones",
+      "title": "Asus Zenfone 10",
+      "url": "asus-zenfone-10",
+      "price": 649,
+      "image": "https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://cdn.comfy.ua/media/catalog/product/1/_/1_asus_rog_phone_9_pro_ai2501_16_512gb.jpg/f_auto",
+      "description": "Compact Asus Zenfone 10 with Snapdragon 8 Gen 2 and 144Hz display.",
+      "stock": 9
+    }
+  ],
+  "laptops": [
+    {
+      "category": "laptops",
+      "title": "MacBook Pro 16 (M3)",
+      "url": "macbook-pro-16-m3",
+      "price": 2499,
+      "image": "https://content1.rozetka.com.ua/goods/images/big/485311776.jpg",
+      "description": "Apple MacBook Pro 16-inch with M3 chip, Liquid Retina XDR display, and long battery life.",
+      "stock": 5
+    },
+    {
+      "category": "laptops",
+      "title": "Dell XPS 15 9530",
+      "url": "dell-xps-15-9530",
+      "price": 1999,
+      "image": "https://content2.rozetka.com.ua/goods/images/big/531961361.jpg",
+      "description": "Dell XPS 15 with 13th Gen Intel Core, OLED display, and NVIDIA RTX 4060.",
+      "stock": 6
+    },
+    {
+      "category": "laptops",
+      "title": "HP Spectre x360 16",
+      "url": "hp-spectre-x360-16",
+      "price": 1799,
+      "image": "https://hotline.ua/img/tx/453/4530308165.jpg",
+      "description": "HP Spectre x360 16-inch convertible with OLED touchscreen and Intel Evo platform.",
+      "stock": 11
+    },
+    {
+      "category": "laptops",
+      "title": "Lenovo Yoga Pro 9i",
+      "url": "lenovo-yoga-pro-9i",
+      "price": 1899,
+      "image": "https://content2.rozetka.com.ua/goods/images/big/586778839.jpg",
+      "description": "Lenovo Yoga Pro 9i with 14.5-inch Mini-LED, Intel Core Ultra, and RTX 4070.",
+      "stock": 8
+    },
+    {
+      "category": "laptops",
+      "title": "Asus ROG Zephyrus G16",
+      "url": "asus-rog-zephyrus-g16",
+      "price": 2099,
+      "image": "https://hotline.ua/img/tx/548/5487877305.jpg",
+      "description": "Asus ROG Zephyrus G16 gaming laptop with Intel Core i9, RTX 4080, and 240Hz display.",
+      "stock": 4
+    },
+    {
+      "category": "laptops",
+      "title": "MSI Stealth 14 Studio",
+      "url": "msi-stealth-14-studio",
+      "price": 1699,
+      "image": "https://content1.rozetka.com.ua/goods/images/big/556417251.jpg",
+      "description": "MSI Stealth 14 Studio with Intel Core i7, RTX 4060, and ultra-light chassis.",
+      "stock": 10
+    },
+    {
+      "category": "laptops",
+      "title": "Acer Swift X 14",
+      "url": "acer-swift-x-14",
+      "price": 1499,
+      "image": "https://content1.rozetka.com.ua/goods/images/big/551291446.jpg",
+      "description": "Acer Swift X 14 with OLED display, NVIDIA RTX 3050, and long battery life.",
+      "stock": 13
+    },
+    {
+      "category": "laptops",
+      "title": "Razer Blade 14 (2024)",
+      "url": "razer-blade-14-2024",
+      "price": 2399,
+      "image": "https://hotline.ua/img/tx/535/5353322035.jpg",
+      "description": "Razer Blade 14 with AMD Ryzen 9, RTX 4070, and QHD+ 240Hz display.",
+      "stock": 3
+    }
+  ]
+}

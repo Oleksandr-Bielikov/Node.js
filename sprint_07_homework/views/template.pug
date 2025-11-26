@@ -1,0 +1,25 @@
+html
+    head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title Estore
+    link(href='/css/bootstrap.css' rel='stylesheet')
+    link(rel='icon' type='image/svg+xml' href='/favicon.svg')
+body
+    include layouts/header.pug
+    block content
+
+    block foot
+        footer.bg-dark.text-white.mt-5.py-4
+            .container.text-center
+                p.mb-1 &copy; 2025 Estore. All rights reserved
+                p.mb-0
+                    | Made with 
+                    span.text-danger &hearts;
+                    |  by Your Company
+                a(href='/download') Download the product catalog
+
+    script(src='/js/bootstrap.js')
+    script(src='/js/cart_count.js')
+
+    block scripts

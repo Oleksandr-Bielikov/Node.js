@@ -1,0 +1,8 @@
+extends template.pug 
+
+block content 
+  .container.mt-4 
+    each items, category in goods 
+        ul 
+            li
+                a(href=`/category/${category}`) #{category} 

@@ -1,0 +1,22 @@
+extends template.pug
+
+block content
+  .container.mt-4
+    h1.text-center.mb-4.text-capitalize #{category} catalog
+    if goods && goods.length
+      .row
+        each item in goods
+          .col-md-3.mb-4
+            .card.h-100.p-2
+              img.card-img-top(src=item.image alt=item.title)
+              .card-body
+                h5.card-title= item.title
+                p.card-text= item.description
+                p.card-text
+                  b Price: #{item.price}$
+                p.card-text
+                  | In stock: #{item.stock}
+              .card-footer
+                a.btn.btn-primary(href=item.url) View Details
+    else
+      .alert.alert-warning.text-center No products found in this category.
