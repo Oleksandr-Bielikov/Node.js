@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="cartForm">
+        <select id="productSelect">
+            <option value="">Choose product</option>
+        </select>
+        <select id="quantity">
+             <option value="1">1</option>
+             <option value="5">5</option>
+             <option value="10">10</option>
+             <option value="15">15</option>
+             <option value="20">20</option>
+        </select>
+        <button type="button" id="addToCart">Add to Cart</button>
+    </form>
+
+    <script>
+        const map = {
+            "iphone-15-pro": "iPhone 15 Pro",
+            "galaxy-s24-ultra": "Samsung Galaxy S24 Ultra",
+            "pixel-8-pro": "Google Pixel 8 Pro",
+            "oneplus-12": "OnePlus 12",
+            "xiaomi-14-pro": "Xiaomi 14 Pro",
+            "xperia-1-v": "Sony Xperia 1 V",
+            "motorola-edge-50-pro": "Motorola Edge 50 Pro",
+            "asus-zenfone-10": "Asus Zenfone 10",
+            "macbook-pro-16-m3": "MacBook Pro 16 (M3)",
+            "dell-xps-15-9530": "Dell XPS 15 9530",
+            "hp-spectre-x360-16": "HP Spectre x360 16",
+            "lenovo-yoga-pro-9i": "Lenovo Yoga Pro 9i",
+            "asus-rog-zephyrus-g16": "Asus ROG Zephyrus G16",
+            "msi-stealth-14-studio": "MSI Stealth 14 Studio",
+            "acer-swift-x-14": "Acer Swift X 14",
+            "razer-blade-14-2024": "Razer Blade 14 (2024)"
+        };
+
+        const selectElement = document.getElementById('productSelect');
+        
+        for (const [key, value] of Object.entries(map)) {
+            const option = document.createElement('option');
+            option.value = key;
+            option.textContent = value;
+            selectElement.appendChild(option);
+        }
+
+        function setCookie(name, value, days = 7) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = `expires=${date.toUTCString()}`;
+            document.cookie = `${name}=${value};${expires};path=/`;
+        }
+
+        document.getElementById('addToCart').addEventListener('click', function() {
+            const productSelect = document.getElementById('productSelect');
+            const quantitySelect = document.getElementById('quantity');
+            
+            const productValue = productSelect.value;
+            const quantityValue = quantitySelect.value;
+            
+            if (!productValue) {
+                alert('Please select a product');
+                return;
+            }
+   
+            let cart = {};
+            cart[productValue] = quantityValue;
+            setCookie('cart', encodeURIComponent(JSON.stringify(cart)));
+            console.log(cart);
+            console.log(`Added ${map[productValue]} (${quantityValue}) to cart!`);
+        });
+    </script>
+</body>
+
+</html>
