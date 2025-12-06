@@ -1,0 +1,20 @@
+h1 404
+
+p #{message}
+
+p You can see goods in this categories:
+
+each cat in cats
+    ul 
+        li 
+            a(href=`/category/${cat.url}`) #{cat.title}
+
+p Or choose one of this most sales goods:
+
+div(style="display: flex; flex-direction: row; gap: 30px")
+    each item in goods
+        div(style="display: flex; flex-direction: column")
+            h3  
+                a(href=`/category/${item.category}/${item.url}`) #{item.title}
+
+            img(src=`${item.image}` style="width:150px")
