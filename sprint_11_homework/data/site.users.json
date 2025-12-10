@@ -1,0 +1,143 @@
+[{
+  "_id": {
+    "$oid": "6931378279f975b1346fd18f"
+  },
+  "name": "Alex",
+  "age": 18,
+  "role": "user",
+  "active": true,
+  "tags": [
+    "js",
+    "node"
+  ],
+  "scores": [
+    {
+      "type": "exam",
+      "value": 70
+    },
+    {
+      "type": "project",
+      "value": 85
+    }
+  ],
+  "address": {
+    "city": "Kyiv",
+    "country": "UA"
+  }
+},
+{
+  "_id": {
+    "$oid": "6931378279f975b1346fd190"
+  },
+  "name": "Marta",
+  "age": 25,
+  "role": "admin",
+  "active": true,
+  "tags": [
+    "python",
+    "ai"
+  ],
+  "scores": [
+    {
+      "type": "exam",
+      "value": 92
+    }
+  ],
+  "address": {
+    "city": "Lviv",
+    "country": "UA"
+  }
+},
+{
+  "_id": {
+    "$oid": "6931378279f975b1346fd191"
+  },
+  "name": "Ivan",
+  "age": 17,
+  "role": "user",
+  "active": false,
+  "tags": [
+    "js"
+  ],
+  "scores": [
+    {
+      "type": "exam",
+      "value": 55
+    },
+    {
+      "type": "project",
+      "value": 40
+    }
+  ],
+  "address": {
+    "city": "Odessa",
+    "country": "UA"
+  }
+},
+{
+  "_id": {
+    "$oid": "6931378279f975b1346fd192"
+  },
+  "name": "Sofia",
+  "age": 30,
+  "role": "moderator",
+  "active": true,
+  "tags": [
+    "design",
+    "ui",
+    "frontend"
+  ],
+  "scores": [],
+  "address": {
+    "city": "Warsaw",
+    "country": "PL"
+  }
+},
+{
+  "_id": {
+    "$oid": "6931378279f975b1346fd193"
+  },
+  "name": "Oleg",
+  "age": 40,
+  "role": "user",
+  "active": false,
+  "tags": [
+    "devops",
+    "cloud"
+  ],
+  "scores": [
+    {
+      "type": "exam",
+      "value": 88
+    }
+  ],
+  "address": {
+    "city": "Kyiv",
+    "country": "UA"
+  },
+  "notes": "Has premium account"
+},
+{
+  "_id": {
+    "$oid": "6931378279f975b1346fd194"
+  },
+  "name": "Julia",
+  "age": 22,
+  "role": "guest",
+  "active": true,
+  "tags": [],
+  "scores": [
+    {
+      "type": "exam",
+      "value": 65
+    },
+    {
+      "type": "bonus",
+      "value": 10
+    }
+  ],
+  "address": {
+    "city": "Berlin",
+    "country": "DE"
+  }
+}]
