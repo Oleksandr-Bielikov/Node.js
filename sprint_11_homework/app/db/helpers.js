@@ -5,35 +5,15 @@ const getCollection = (name) => {
     return db.collection(name);
 };
 
-const getAllDocuments = async (collectionName) => {
+const getCollectionData = async (collectionName, filters, options) => {
     const collection = getCollection(collectionName);
-    const data = await collection.find().toArray();
-    return data;
+    const data = collection.find(filters);
+
+    if (!options) return await data.toArray();
+    else return await data.sort(options).toArray();
 };
 
-const getSortByAge = async (collectionName, filter) => {
-    const collection = getCollection(collectionName);
-    const data = await collection.find().sort({ age: filter }).toArray();
-    return data;
-};
-
-const getSortByField = async (collectionName, field, filter) => {
-    const collection = getCollection(collectionName);
-    const data = await collection.find({ [field]: filter }).toArray();
-    return data;
-};
-
-const getSortByFieldExists = async (collectionName, field) => {
-    const collection = getCollection(collectionName);
-    const data = await collection.find({ [field]: { $exists: true } }).toArray();
-    return data;
-};
-
-export const getUsersData = () => getAllDocuments("users");
-export const userAgeFilter = (filter) => getSortByAge("users", filter);
-export const userRoleFilter = (filter) => getSortByField("users", "role", filter);
-export const userTagsFilter = (filter) => getSortByField("users", "tags", filter);
-export const userFieldFilter = (field) => getSortByFieldExists("users", field);
+export const getUsersData = (filters, options) => getCollectionData("users", filters, options);
 export const getTags = async () => {
     const collection = getCollection("users");
     const data = await collection.distinct("tags");

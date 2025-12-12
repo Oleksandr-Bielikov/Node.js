@@ -1,30 +1,32 @@
 import { Router } from "express";
-import { getTags, getUsersData, userAgeFilter, userFieldFilter, userRoleFilter, userTagsFilter } from "../db/helpers.js";
+import { getTags, getUsersData } from "../db/helpers.js";
 const router = Router();
 
 router.get('/', async (req, res) => {
     const { sort, role, notes, tag } = req.query;
-    let data = await getUsersData();
+    const filters = {};
+    const options = {};
 
     if (sort === "min") {
-        data = await userAgeFilter(1);
+        options.age = 1;
     } else if (sort === "max") {
-        data = await userAgeFilter(-1);
+        options.age = -1;
     };
 
     if (role && role !== "all") {
-        data = await userRoleFilter(role);
+        filters.role = role;
     };
 
     if (notes) {
-        data = await userFieldFilter("notes");
+        filters.notes = { $exists: true, $ne: null};
+    };
+
+    if (tag) {
+        filters.tags = tag;
     };
 
     const uniqueTags = await getTags();
-
-    if (uniqueTags.includes(tag)) {
-        data = await userTagsFilter(tag)
-    }
+    const data = await getUsersData(filters, options);
 
     res.render("main", { data, role, uniqueTags, notesChecked: notes ? true : false });
 });
