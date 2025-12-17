@@ -1,0 +1,41 @@
+extends header
+block content
+    .container
+        h1= title
+        p= message
+        .row
+            .col-12
+                p
+                    a(href="/create" target="_blank") Create new document
+            if documents && documents.length > 0
+                h2 Docs (#{documents.length}):
+            each doc in documents
+                .col-3
+                    .card.m-2
+                        .card-body.p-2(style=`background-image: url(${doc.image}); background-size: 50px; background-position: 100% 100%; background-repeat: no-repeat;`)
+                            p.card-text.font-monospace(style="font-size: 0.75rem;")
+                            | ID: #{doc._id}
+                            br
+                            | ID: #{doc._id.getTimestamp()}
+                            br
+                            | #{doc.title}
+                            br
+                            | #{doc.url}
+                            br
+                            | #{doc.price}
+                            br
+                            | #{doc.stock}
+                            br
+                            | #{ JSON.stringify(doc.tags, null, 2)}
+                            div
+                                a(href=`/update/${doc._id}` class="btn btn-sm btn-primary mt-2") Update
+                                | 
+                                form(action=`/delete/${doc._id}` method="POST" style="display: inline;")
+                                    button(type="submit" class="btn btn-sm btn-danger mt-2" onclick="return confirm('Are you sure?')") Delete
+                                | 
+                                form(action=`/safe-delete/${doc._id}` method="POST" style="display: inline;")
+                                    button(type="submit" class="btn btn-sm btn-warning mt-2" onclick="return confirm('Are you sure?')") Safe del
+
+                //- pre= JSON.stringify(doc, null, 2)
+            else
+                p.no-documents docs not found
