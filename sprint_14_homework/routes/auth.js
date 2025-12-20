@@ -1,6 +1,6 @@
 import express from 'express';
 import User from '../models/User.js';
-import { hashPassword, verifyPassword } from '../heplers/pass.js';
+import { hashPassword, verifyPassword } from '../helpers/pass.js';
 const router = express.Router();
 
 router.get('/:type(login|registration)', (req, res) => {
@@ -31,7 +31,7 @@ router.post('/login', async (req, res) => {
     }
   } catch (error) {
     console.error(error);
-    res.status(500).render('login', { error: error.errorResponse.errmsg })
+    res.status(500).render('login', { error: "Login error" });
   };
 });
 
@@ -65,8 +65,6 @@ router.post('/registration', async (req, res) => {
 
 router.post('/logout', (req, res) => {
   if (req.session.user) {
-    const username = req.session.user.user;
-
     req.session.destroy((err) => {
       if (err) {
         return res.status(500).json({ error: 'Logout error' });
