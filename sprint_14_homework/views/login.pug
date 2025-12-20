@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title #{type === 'login' ? "Login" : "Registration"}
+  body
+    h1 #{type === 'login' ? "Login form" : "Registration form"}
+    
+    if error
+      p(style="color: red;") #{error}
+    
+    if message
+      p(style="color: green;") #{message}
+    
+    form(action=(type === 'login' ? "/auth/login" : "/auth/registration") method="POST")
+      div
+        label(for="username") Username:
+        br
+        input(type="text" id="username" name="username" required)
+      
+      br
+      
+      div
+        label(for="password") Password:
+        br
+        input(type="password" id="password" name="password" required)
+      
+      br
+      
+      button(type="submit") #{type === 'login' ? "Login" : "Registration"}
+    
+    br
+    p 
+      a(href="/auth/registration") Registration
+    p
+      a(href="/") Back to Home

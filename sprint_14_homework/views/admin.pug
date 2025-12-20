@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Admin Panel
+  body
+    h1 Admin Panel
+    
+    if user
+      p Welcome, #{user.user}!
+      p Logged in at: #{user.loggedInAt}
+    
+    h2 Admin Dashboard
+    
+    h3 Statistics
+    ul
+      li Total Users: #{adminData.totalUsers}
+      li Active Users: #{adminData.activeUsers}
+      li Total Sessions: #{adminData.totalSessions}
+    
+    h3 Quick Links
+    ul
+      li
+        a(href="/admin/stats") View Statistics
+      li
+        a(href="/admin/users") Manage Users
+      li
+        a(href="/auth/profile") My Profile
+    
+    br
+    
+    form(action="/auth/logout" method="POST")
+      button(type="submit") Logout
+    
+    br
+    p
+      a(href="/") Back to Home
